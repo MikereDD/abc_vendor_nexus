@@ -19,7 +19,6 @@ include vendor/nexus/configs/abc_phone.mk
 # Inherit AOSP device configuration for  taimen
 $(call inherit-product, device/google/taimen/aosp_taimen.mk)
 
-$(call inherit-product, vendor/pixelgapps/gapps.mk)
 
 # Override AOSP build properties
 PRODUCT_NAME := taimen
@@ -35,3 +34,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="taimen-user 8.1.0 OPM1.171019.013 4474084 release-keys"
 
 $(call inherit-product-if-exists, vendor/google/taimen/taimen-vendor.mk)
+
+$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
+
